@@ -47,6 +47,9 @@
     height: 4rem;
     margin-right: 0.5rem;
 }
+
+
+
 .ContentBox__Buttons--m{
     background-color: transparent;
     border: 1px solid #CCCCCC;
@@ -60,6 +63,10 @@
     width: 4rem;
     height: 4rem;
     margin-right: 0.5rem;
+}
+
+.isClicked{
+    border: 2px solid #222222;
 }
 
 .ContentBox_Add{

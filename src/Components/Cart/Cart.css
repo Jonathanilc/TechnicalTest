@@ -1,0 +1,42 @@
+.Cart {
+    position: absolute;
+    right: 8rem;
+    top: 4rem;
+    width: 30rem;
+    height: 35rem;
+    background-color: white;
+    z-index: 999;
+    border: 1px solid #CCCCCC;
+
+}
+
+.CartItem{
+    padding: 2rem;
+    width: 100%;
+    height: 15rem;
+}
+
+.CartItem__Img{
+    
+    float: left;
+    width: 30%;
+
+}
+
+.CartItem__Txt{
+    
+    float: left;
+    width: 70%;
+}
+
+.CartItem_Txt--Title{
+    text-align: left;
+    padding-bottom: 1rem;
+}
+.CartItem_Txt--Price{
+    text-align: left;
+    padding-bottom: 1rem;
+}
+.CartItem_Txt--Size{
+    text-align: left;
+}
