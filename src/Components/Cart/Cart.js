@@ -8,7 +8,7 @@ const Cart = props => {
       <div className="Cart">
         <div className="CartItem">
           <div className="CartItem__Img">
-            <img src={Tee} width="100%" />
+            <img src={Tee} width="100%" alt="Tee"/>
           </div>
           <div className="CartItem__Txt">
             <div className="CartItem_Txt--Title">Classic Tee</div>
@@ -21,7 +21,7 @@ const Cart = props => {
 
         <div className="CartItem">
           <div className="CartItem__Img">
-            <img src={Tee} width="100%" />
+            <img src={Tee} width="100%" alt="Tee"/>
           </div>
           <div className="CartItem__Txt">
             <div className="CartItem_Txt--Title">Classic Tee</div>
