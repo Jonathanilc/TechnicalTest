@@ -1,0 +1,72 @@
+/* #222222 */
+
+.ContentBox {
+    text-align: left;
+    padding: 0 5rem;
+    width: 90%;
+}
+
+
+.ContentBox__Title {
+    padding-bottom: 2rem;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.ContentBox__Price{
+    font-weight: 700;
+    padding: 0.5rem 0;
+    border: 1px solid;
+    border-left: 0;
+    border-right: 0;
+    border-color: #CCCCCC;
+    margin-bottom: 2rem;
+}
+
+.ContentBox__Text{
+    color:#888888;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+.ContentBox__Size{
+    font-size: 1.2rem;
+    color: #888888;
+    padding: 1rem 0;
+}
+
+.ContentBox__Buttons{
+    margin: 1rem 0;
+}
+
+.ContentBox__Buttons--s{
+    background-color: transparent;
+    border: 1px solid #CCCCCC;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+}
+.ContentBox__Buttons--m{
+    background-color: transparent;
+    border: 1px solid #CCCCCC;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+}
+.ContentBox__Buttons--l{
+    background-color: transparent;
+    border: 1px solid #CCCCCC;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+}
+
+.ContentBox_Add{
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 2px solid #222222;
+    width: 15rem;
+    height: 3.5rem;
+    
+}
