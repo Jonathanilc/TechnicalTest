@@ -48,6 +48,10 @@
     margin-right: 0.5rem;
 }
 
+.ContentBox__Buttons--s:focus{
+    outline: none;
+}
+
 
 
 .ContentBox__Buttons--m{
@@ -57,12 +61,21 @@
     height: 4rem;
     margin-right: 0.5rem;
 }
+
+.ContentBox__Buttons--m:focus{
+    outline: none;
+}
+
 .ContentBox__Buttons--l{
     background-color: transparent;
     border: 1px solid #CCCCCC;
     width: 4rem;
     height: 4rem;
     margin-right: 0.5rem;
+}
+
+.ContentBox__Buttons--l:focus{
+    outline: none;
 }
 
 .isClicked{
