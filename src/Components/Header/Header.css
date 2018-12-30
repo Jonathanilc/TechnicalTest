@@ -1,0 +1,19 @@
+
+/* #F6F6F7 */
+/* #222222 */
+/* #888888 */
+.Header {
+
+    position: absolute;
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #F6F6F7;
+    padding: .5rem;
+}
+
+.Header__Item {
+    color: #888888;
+    position: relative;
+    float: right;
+    right: 8rem;
+}
