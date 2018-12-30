@@ -1,22 +1,50 @@
 import React, { Component } from "react";
 import "./ContentBox.css";
+import { connect } from "react-redux";
+
+import { add_product } from "../../../Actions/ActionCreator";
 
 class ContentBox extends Component {
   state = {
     s: false,
     m: false,
     l: false,
-    current: ""
+    current: "",
+    nS: 0,
+    nM: 0,
+    nL: 0
   };
 
   onhandleClicked = e => {
     this.setState(
-      Object.assign({ s: false, m: false, l: false, current:e.target.value}, { [e.target.name]: true })
+      Object.assign(
+        { s: false, m: false, l: false, current: e.target.value },
+        { [e.target.name]: true }
+      )
     );
     console.log(this.state);
   };
 
-  componentDidMount() {}
+  onHandleAdd = () => {
+    const currentValue = this.state[["n", this.state.current].join("")];
+    this.setState({
+      ...this.state,
+      [["n", this.state.current].join("")]: currentValue + 1
+    });
+    console.log(this.state);
+  };
+
+  componentDidUpdate() {
+    this.props.dispatch(
+      add_product({
+        title: "Classic Tee",
+        price: 75,
+        nS: this.state.nS,
+        nM: this.state.nM,
+        nL: this.state.nL
+      })
+    );
+  }
   render() {
     return (
       <div className="ContentBox">
@@ -32,7 +60,9 @@ class ContentBox extends Component {
         </div>
         <div className="ContentBox__Size">
           SIZE<span style={{ color: "#C90000", fontWeight: "bold" }}>*</span>:
-          <span style={{ color: "#222222", fontWeight: "bold" }}>{this.state.current}</span>
+          <span style={{ color: "#222222", fontWeight: "bold" }}>
+            {this.state.current}
+          </span>
         </div>
 
         <div className="ContentBox__Buttons">
@@ -94,13 +124,14 @@ class ContentBox extends Component {
               L
             </button>
           )}
-          
         </div>
 
-        <button className="ContentBox_Add">ADD TO CART</button>
+        <button className="ContentBox_Add" onClick={this.onHandleAdd}>
+          ADD TO CART
+        </button>
       </div>
     );
   }
 }
 
-export default ContentBox;
+export default connect()(ContentBox);

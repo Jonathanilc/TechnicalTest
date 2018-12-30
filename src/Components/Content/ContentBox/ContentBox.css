@@ -90,3 +90,7 @@
     height: 3.5rem;
     
 }
+
+.ContentBox_Add:focus{
+    outline: none;
+}
