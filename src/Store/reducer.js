@@ -15,6 +15,8 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.ADD_PRODUCT:
       return { ...state, product: action.product };
+    case actionTypes.REMOVE_PRODUCT:
+      return {...state,product:{...state.product, [action.size]:0}};
     default:
       return state;
   }

@@ -34,9 +34,36 @@
 }
 
 .CartItem__Txt{
-    
+    text-align: left;
     float: left;
     width: 70%;
+}
+
+.CartItem--Remove{
+    
+    background-color: transparent;
+    border: 1px solid #CCCCCC;
+    box-shadow: .1rem .2rem 5px #CCCCCC;
+    margin-top: 0.5rem;
+    transition: all .2s;
+}
+
+.CartItem--Remove:hover{
+    box-shadow: .2rem .3rem 7px #CCCCCC;
+    border: 1px solid #222222;
+    transform: translateY(-1px);
+
+}
+
+.CartItem--Remove:active{
+    box-shadow: .1rem .1rem 4px #CCCCCC;
+    border: 1px solid #222222;
+    transform: translateY(0);
+
+}
+
+.CartItem--Remove:focus{
+    outline: none;
 }
 
 .CartItem_Txt--Title{
