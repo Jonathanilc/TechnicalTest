@@ -8,20 +8,80 @@
     margin-top: 1rem;
     width: 100%;
     background-color: #F6F6F7;
-    padding: .5rem;
+    padding:0;
+    height: auto;
 }
 
 .Header__Item {
+    
+    padding: .5rem;  
     color: #888888;
     position: relative;
     float: right;
     right: 8rem;
     background-color: transparent;
-    border: none;
+    border: 1px solid transparent;
+    border-bottom:2px solid transparent 
 }
+@media(max-width: 600px){
+    .Header__Item {
+        display: none;
+        right: 3rem;
+    } 
+}
+
+.Header__Icon{
+    display: none;
+    padding: .5rem;  
+    color: #888888;
+    position: relative;
+    float: right;
+    right: 8rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom:2px solid transparent
+    
+}
+
+@media(max-width: 600px){
+    .Header__Icon {
+        display: none;
+        right: 0;
+    } 
+}
+
+.Header__Icon--isClicked {
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    border-bottom: 2px solid white;
+    z-index: 1001;
+}
+
+@media(max-width: 600px){
+    .Header__Icon{
+        display: block;
+        float: right;
+        margin-right: 3rem;
+        
+        
+    }
+}
+
+
+
+.Header__Item--isClicked {
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    border-bottom: 2px solid white;
+    z-index: 1000;
+}
+
 
 .Header__Item:focus{
     outline: none;
+    
 }
 
 

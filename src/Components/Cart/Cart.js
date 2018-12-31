@@ -10,7 +10,7 @@ const Cart = props => {
         {props.products.nS !== 0 && (
           <div className="CartItem">
             <div className="CartItem__Img">
-              <img src={Tee} width="100%" alt="Tee" />
+              <img  src={Tee} width="100%" alt="Tee" />
             </div>
             <div className="CartItem__Txt">
               <div className="CartItem_Txt--Title">Classic Tee</div>
