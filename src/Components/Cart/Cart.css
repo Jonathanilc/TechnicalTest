@@ -3,6 +3,7 @@
     right: 8rem;
     top: 4.1rem;
     width: 30rem;
+    min-height: 10rem;
     height: auto;
     background-color: white;
     z-index: 999;
