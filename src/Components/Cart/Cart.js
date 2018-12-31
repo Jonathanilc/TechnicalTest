@@ -34,7 +34,7 @@ const Cart = props => {
                 {props.products.nM}x{" "}
                 <span style={{ fontWeight: "bold" }}>$75.00</span>
               </div>
-              <div className="CartItem_Txt--Size">Size: L</div>
+              <div className="CartItem_Txt--Size">Size: M</div>
             </div>
           </div>
         )}
