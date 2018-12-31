@@ -10,9 +10,9 @@ class ContentBox extends Component {
     m: false,
     l: false,
     current: "",
-    nS: 0,
-    nM: 0,
-    nL: 0
+    nS: this.props.products.nS,
+    nM: this.props.products.nM,
+    nL: this.props.products.nL
   };
 
   onhandleClicked = e => {
@@ -26,25 +26,44 @@ class ContentBox extends Component {
   };
 
   onHandleAdd = () => {
-    const currentValue = this.state[["n", this.state.current].join("")];
-    this.setState({
-      ...this.state,
-      [["n", this.state.current].join("")]: currentValue + 1
-    });
+    const currentValue = this.props.products[
+      ["n", this.state.current].join("")
+    ];
+    this.setState(
+      {
+        ...this.state,
+        nS: this.props.products.nS,
+        nM: this.props.products.nM,
+        nL: this.props.products.nL,
+        [["n", this.state.current].join("")]: currentValue + 1
+      },
+      () => {
+        this.props.dispatch(
+          add_product({
+            title: "Classic Tee",
+            price: 75,
+            nS: this.state.nS,
+            nM: this.state.nM,
+            nL: this.state.nL
+          })
+        );
+        console.log(this.state);
+      }
+    );
     console.log(this.state);
   };
 
-  componentDidUpdate() {
-    this.props.dispatch(
-      add_product({
-        title: "Classic Tee",
-        price: 75,
-        nS: this.state.nS,
-        nM: this.state.nM,
-        nL: this.state.nL
-      })
-    );
-  }
+  // componentDidUpdate() {
+  //   this.props.dispatch(
+  //     add_product({
+  //       title: "Classic Tee",
+  //       price: 75,
+  //       nS: this.state.nS,
+  //       nM: this.state.nM,
+  //       nL: this.state.nL
+  //     })
+  //   );
+  // }
   render() {
     return (
       <div className="ContentBox">
@@ -134,4 +153,10 @@ class ContentBox extends Component {
   }
 }
 
-export default connect()(ContentBox);
+const mapStateToProps = state => {
+  return {
+    products: state.product
+  };
+};
+
+export default connect(mapStateToProps)(ContentBox);
