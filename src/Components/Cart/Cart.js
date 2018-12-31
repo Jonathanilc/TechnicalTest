@@ -8,7 +8,7 @@ const Cart = props => {
   const onRemoveHandler = (e) =>{
     props.dispatch(remove_product(e.target.name));
   }
-  if (props.isClicked === true) {
+  if (true) {
     return (
       <div className="Cart">
         {props.products.nS !== 0 && (
