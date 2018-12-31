@@ -1,13 +1,14 @@
 .Cart {
     position: absolute;
     right: 8rem;
-    top: -.3rem;
+    top: 4.1rem;
     width: 30rem;
     min-height: 10rem;
     height: auto;
     background-color: white;
     z-index: 999;
     border: 1px solid #CCCCCC;
+    transition: all .4s ease-in-out;
 }
 
 @media(max-width: 600px){
