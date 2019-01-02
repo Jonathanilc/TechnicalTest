@@ -40,6 +40,43 @@
     width: 70%;
 }
 
+.CartItem--empty{
+    padding: 4rem;
+}
+
+.CartItem__span{
+    display: inline-block;
+    font-weight: 900;
+    font-size: 2rem;
+    /* transition: all .2s ease-in; */
+    padding-right: 1rem;
+}
+
+.CartItem__span:hover{
+    font-weight: 900;
+    padding: 0;
+    padding-right: 1rem;
+    animation: faceAni 1s forwards;
+}
+
+@keyframes faceAni {
+    0% {
+        transform: rotate(-7deg);
+    }
+    25% {
+        transform: rotate(7deg) scale(1.6);
+    }
+    50% {
+        transform: rotate(-7deg) scale(1.6);
+    }
+    75% {
+        transform: rotate(7deg) scale(1.6);
+    }
+    100% {
+        transform: rotate(-7deg) scale(1.6);
+    }
+}
+
 .CartItem--Remove{
     
     background-color: transparent;
